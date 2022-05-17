@@ -4,7 +4,7 @@
     <p class="big-title font-diff">Latest <span>Online Courses</span></p>
     <div class="container">
       <div class="row">
-        <div class="col-4" v-for="(item, index) in lessons" :key="index">
+        <div class="col-4 journey" v-for="(item, index) in lessons" :key="index">
           <img :src="require('../assets/' + item.img + '.jpg')" alt="" />
           <div class="data">
             <p class="prezzo">

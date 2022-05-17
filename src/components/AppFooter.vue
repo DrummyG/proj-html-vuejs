@@ -38,7 +38,7 @@
     </section>
     <p class="middle">	&copy;2020 Maxcoach, All Rights Reserved</p>
 
-    <i class="fa-solid fa-arrow-up-long"></i>
+    <i class="fa-solid fa-arrow-up-long" href="media"></i>
   </footer>
 </template>
 
