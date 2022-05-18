@@ -3,8 +3,19 @@
       <img src="../assets/dark-logo.png" alt="">
 
       <div class="link">
-          <p v-for="(item, index) in listaLink" :key="index"><a href="">{{item}}
-          <i class="fa-solid fa-angle-down"></i></a></p>
+          <ul>
+              <li class="dropdown dropdown-6" v-for="(item, index) in listaLink" :key="index">
+              <a href="">{{item}} <i class="fa-solid fa-angle-down"></i></a>
+                  <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
+                      <li>your face</li>
+                      <li>la tua faccia</li>
+                      <li>mariposa</li>
+                      <li>ermosa</li>
+                  </ul>
+              </li>
+          </ul>
+          <!-- <p v-for="(item, index) in listaLink" :key="index"><a href="">{{item}}
+          <i class="fa-solid fa-angle-down"></i></a></p> -->
       </div>
 
       <div class="media">
@@ -32,9 +43,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import '../assets/styles/variables.scss';
 nav{
     height: 50px;
     align-items: center;
+
+    ul{
+        list-style-type: none;
+
+        li{
+            display: inline-block;
+        }
+    }
 }
 
 img{
@@ -50,6 +70,10 @@ img{
         line-height: 50px;
         margin-bottom: 0;
     }
+}
+
+a:hover{
+    color: $button;
 }
 
 a{

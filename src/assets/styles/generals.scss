@@ -43,3 +43,71 @@ section{
     width: 70%;
     margin: 60px auto;
 }
+
+.dropdown{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   perspective: 1000px;
+   z-index: 100;
+
+   &:hover .dropdown_menu li{
+    display: block
+   }
+}
+
+.dropdown_menu{
+    position: absolute;
+   top: 100%;
+   left: 0;
+   width: 150px;
+   perspective: 1000px;
+   
+   z-index: -1;
+   background-color: $color-footer;
+
+   li{
+       text-align: center;
+       margin-right: 20px;
+       margin-top: 10px;
+    font-size: small;
+    display: none;
+    opacity: 0;
+    border-bottom: 2px solid transparent;
+   }
+
+   li:hover{
+       border-bottom: 2px solid $button;
+   }
+}
+
+.dropdown:hover .dropdown_menu--animated{
+    display: block
+}
+
+.dropdown_menu--animated{
+    display: none;
+
+    li{
+        display: block;
+      opacity: 1
+    }
+}
+
+.dropdown_menu-6{
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
