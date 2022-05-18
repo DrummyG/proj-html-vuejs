@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header id="#top">
     <app-nav />
 
     <div class="container">

@@ -27,6 +27,5 @@ export default {
 @import './assets/styles/generals.scss';
 @import './assets/styles/variables.scss';
 #app {
-
 }
 </style>
